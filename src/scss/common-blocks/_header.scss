@@ -1,0 +1,58 @@
+@use '../base/mixins';
+
+.header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	height: 100px;
+	background-color: rgba(16, 16, 29, 0.9);
+	z-index: 20;
+	// .header__container
+	&__container {
+		height: 100%;
+	}
+	// .header__inner
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+	}
+	// .header__logo
+	&__logo {
+		font-weight: 800;
+		font-size: mixins.rem(28);
+		text-transform: uppercase;
+	}
+	// .header__logo-link
+	&__logo-link {
+	}
+	// .header__logo--blue
+	&__logo--blue {
+		color: #42a9ed;
+	}
+	// .header__menu
+	&__menu {
+		display: flex;
+		column-gap: 60px;
+		padding-top: 8px;
+		font-weight: 600;
+		font-size: mixins.rem(13);
+		text-transform: uppercase;
+	}
+	// .header__menu-item
+	&__menu-item {
+		transition: 0.3s ease;
+		&:hover {
+			color: #43abf0;
+		}
+	}
+	// .header__burger
+	&__burger {
+		display: none;
+	}
+	// .header__burger-line
+	&__burger-line {
+	}
+}
