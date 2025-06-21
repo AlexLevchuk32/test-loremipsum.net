@@ -22,6 +22,7 @@
 	}
 	// .header__logo
 	&__logo {
+		font-family: 'Raleway', sans-serif;
 		font-weight: 800;
 		font-size: rem(28);
 		text-transform: uppercase;
@@ -31,7 +32,7 @@
 	}
 	// .header__logo--blue
 	&__logo--blue {
-		color: $color-main-blue-light;
+		color: $color-main-light-blue;
 	}
 	// .header__menu
 	&__menu {
@@ -45,9 +46,9 @@
 	// .header__menu-item
 	&__menu-item {
 		position: relative;
-		transition: 0.3s ease;
+		transition: 0.3s ease-in-out;
 		&:hover {
-			color: $color-main-blue-light;
+			color: $color-main-light-blue;
 		}
 		&::before {
 			content: '';
@@ -56,11 +57,11 @@
 			bottom: -8px;
 			width: 110%;
 			height: 3px;
-			background-color: $color-main-blue-light;
+			background-color: $color-main-light-blue;
 			transform: translateX(-5%);
 			opacity: 0;
 			// width: 0%;
-			transition: 0.3s ease;
+			transition: 0.4s ease-in-out;
 		}
 		&.active::before {
 			opacity: 1;

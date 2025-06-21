@@ -101,11 +101,16 @@
 							<div class="order__plan order-plan">
 								<div class="order-plan__list">
 									<div class="order-plan__item">
-										<img
-											class="order-plan__item-img"
-											src="/icons/search-offer.svg"
-											alt="search offer"
-										/>
+										<div class="order-plan__item-icon">
+											<img
+												class="order-plan__item-img"
+												src="/icons/search-offer.svg"
+												alt="search offer"
+											/>
+											<div
+												class="item-icon item-icon__search"
+											></div>
+										</div>
 										<p class="order-plan__item-descr">
 											Lorem ipsum dolor sit amet
 										</p>
@@ -118,11 +123,16 @@
 										<span class="order-plan__dots-item"></span>
 									</div>
 									<div class="order-plan__item">
-										<img
-											class="order-plan__item-img"
-											src="/icons/order-discount.svg"
-											alt="search offer"
-										/>
+										<div class="order-plan__item-icon">
+											<img
+												class="order-plan__item-img"
+												src="/icons/order-discount.svg"
+												alt="search offer"
+											/>
+											<div
+												class="item-icon item-icon__discount"
+											></div>
+										</div>
 										<p class="order-plan__item-descr">
 											Сonsecteturadipiscing elit
 										</p>
@@ -135,11 +145,16 @@
 										<span class="order-plan__dots-item"></span>
 									</div>
 									<div class="order-plan__item">
-										<img
-											class="order-plan__item-img"
-											src="/icons/send-order.svg"
-											alt="search offer"
-										/>
+										<div class="order-plan__item-icon">
+											<img
+												class="order-plan__item-img"
+												src="/icons/send-order.svg"
+												alt="search offer"
+											/>
+											<div
+												class="item-icon item-icon__order"
+											></div>
+										</div>
 										<p class="order-plan__item-descr">
 											Sed do eiusmod tempor
 										</p>
@@ -152,11 +167,16 @@
 										<span class="order-plan__dots-item"></span>
 									</div>
 									<div class="order-plan__item">
-										<img
-											class="order-plan__item-img"
-											src="/icons/confirm-order.svg"
-											alt="search offer"
-										/>
+										<div class="order-plan__item-icon">
+											<img
+												class="order-plan__item-img"
+												src="/icons/confirm-order.svg"
+												alt="search offer"
+											/>
+											<div
+												class="item-icon item-icon__confirm"
+											></div>
+										</div>
 										<p class="order-plan__item-descr">
 											Esse cillum dolore eu fugiat
 										</p>
@@ -169,11 +189,16 @@
 										<span class="order-plan__dots-item"></span>
 									</div>
 									<div class="order-plan__item">
-										<img
-											class="order-plan__item-img"
-											src="/icons/order-payment.svg"
-											alt="search offer"
-										/>
+										<div class="order-plan__item-icon">
+											<img
+												class="order-plan__item-img"
+												src="/icons/order-payment.svg"
+												alt="search offer"
+											/>
+											<div
+												class="item-icon item-icon__payment"
+											></div>
+										</div>
 										<p class="order-plan__item-descr">
 											Excepteur sint occaecat cupidatat non
 											proident
@@ -182,11 +207,12 @@
 								</div>
 							</div>
 							<div class="order__form">
-								<form class="order-form" action="#" method="POST">
+								<form class="order-form">
 									<div class="order-form__row">
 										<div class="order-form__item">
 											<div
 												class="order-form__select custom-select"
+												tabindex="0"
 											>
 												<div class="custom-select__header">
 													<div class="custom-select__current">
@@ -241,6 +267,60 @@
 													</div>
 												</div>
 											</div>
+											<select
+												class="order-form__select defaulth-select"
+												name="order-form__select"
+												id="order-form__select"
+												placeholder="Выберите тип системы"
+												tabindex="-1"
+											>
+												<option>Выберите тип системы</option>
+												<option value="Sed ut perspiciatis">
+													Sed ut perspiciatis
+												</option>
+												<option value="Nemo enim ipsam">
+													Nemo enim ipsam
+												</option>
+												<option value="Et harum quidem">
+													Et harum quidem
+												</option>
+												<option value="Temporibus autem">
+													Temporibus autem
+												</option>
+												<option value="Itaque earum rerum">
+													Itaque earum rerum
+												</option>
+												<option value="Sed ut perspiciatis">
+													Sed ut perspiciatis
+												</option>
+												<option value="Nemo enim ipsam">
+													Nemo enim ipsam
+												</option>
+												<option value="Et harum quidem">
+													Et harum quidem
+												</option>
+												<option value="Temporibus autem">
+													Temporibus autem
+												</option>
+												<option value="Itaque earum rerum">
+													Itaque earum rerum
+												</option>
+												<option value="Sed ut perspiciatis">
+													Sed ut perspiciatis
+												</option>
+												<option value="Nemo enim ipsam">
+													Nemo enim ipsam
+												</option>
+												<option value="Et harum quidem">
+													Et harum quidem
+												</option>
+												<option value="Temporibus autem">
+													Temporibus autem
+												</option>
+												<option value="Itaque earum rerum">
+													Itaque earum rerum
+												</option>
+											</select>
 										</div>
 										<div class="order-form__item">
 											<input
@@ -250,6 +330,7 @@
 												type="email"
 												placeholder="Ваш e-mail"
 												required
+												tabindex="1"
 											/>
 										</div>
 										<div class="order-form__item">
@@ -260,6 +341,7 @@
 												type="text"
 												placeholder="Ваше имя"
 												required
+												tabindex="2"
 											/>
 										</div>
 									</div>
@@ -277,6 +359,7 @@
 												min="0"
 												max="100"
 												value="75"
+												tabindex="3"
 											/>
 										</div>
 										<div class="order-form__item">
@@ -285,6 +368,7 @@
 												id="order-form__file"
 												name="order-form__file"
 												type="file"
+												tabindex="4"
 											/>
 											<label
 												class="order-form__file-label"
@@ -305,6 +389,7 @@
 										<button
 											class="order-form__send-btn"
 											type="submit"
+											tabindex="4"
 										>
 											Отправить
 										</button>
