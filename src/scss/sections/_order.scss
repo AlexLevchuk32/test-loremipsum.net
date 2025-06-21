@@ -1,0 +1,107 @@
+@use '../base/mixins' as *;
+@use '../utils/variables' as *;
+
+.order {
+	position: relative;
+	min-height: 920px;
+	padding: 121px 0 151px;
+	background-color: $color-main-bg;
+	// .order__bg
+	&__bg {
+	}
+	// .order__img
+	&__img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	// .order__container
+	&__container {
+		position: relative;
+		z-index: 10;
+	}
+	// .order__inner
+	&__inner {
+	}
+	// .order__title
+	&__title {
+	}
+	// .order__descr
+	&__descr {
+	}
+	// .order__plan
+	&__plan {
+	}
+	// .order__form
+	&__form {
+	}
+}
+.order-plan {
+	// .order-plan__list
+	&__list {
+	}
+	// .order-plan__item
+	&__item {
+	}
+	// .order-plan__item-img
+	&__item-img {
+	}
+	// .order-plan__item-descr
+	&__item-descr {
+	}
+	// .order-plan__dots
+	&__dots {
+	}
+	// .order-plan__dots-item
+	&__dots-item {
+	}
+}
+.order-form {
+	// .order-form__row
+	&__row {
+	}
+	// .order-form__item
+	&__item {
+	}
+	// .order-form__select
+	&__select {
+	}
+	// .order-form__input
+	&__input {
+	}
+	// .order-form__range-label
+	&__range-label {
+	}
+	// .order-form__range
+	&__range {
+	}
+	// .order-form__file
+	&__file {
+	}
+	// .order-form__file-label
+	&__file-label {
+	}
+	// .order-form__file-icon
+	&__file-icon {
+	}
+	// .order-form__file-img
+	&__file-img {
+	}
+	// .order-form__send-btn
+	&__send-btn {
+	}
+}
+.custom-select {
+	// .custom-select__header
+	&__header {
+	}
+	// .custom-select__current
+	&__current {
+	}
+	// .custom-select__list
+	&__list {
+	}
+	// .custom-select__item
+	&__item {
+	}
+}
