@@ -5,8 +5,8 @@
 		<link rel="icon" type="image/svg+xml" href="/test-loremipsum.net/vite.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Vite App</title>
-		<script type="module" crossorigin src="/test-loremipsum.net/assets/index-DIhhidWz.js"></script>
-		<link rel="stylesheet" crossorigin href="/test-loremipsum.net/assets/index-lushH4zn.css">
+		<script type="module" crossorigin src="/test-loremipsum.net/assets/index-B8e8eCfB.js"></script>
+		<link rel="stylesheet" crossorigin href="/test-loremipsum.net/assets/index-CB6JPnFg.css">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -27,7 +27,7 @@
 								Оформить заказ
 							</a>
 						</nav>
-						<button class="header__burger">
+						<button class="header__burger-btn">
 							<span class="header__burger-line"></span>
 							<span class="header__burger-line"></span>
 							<span class="header__burger-line"></span>
@@ -42,6 +42,12 @@
 						<img
 							class="main-banner__img"
 							src="/test-loremipsum.net/images/main-bg.webp"
+							loading="lazy"
+							alt="main background"
+						/>
+						<img
+							class="main-banner__img-small"
+							src="/test-loremipsum.net/images/main-bg-2.webp"
 							loading="lazy"
 							alt="main background"
 						/>
@@ -86,21 +92,11 @@
 					</div>
 				</section>
 
-				<section
-					class="order"
-					style="
-						position: relative;
-						background-color: #272733;
-						height: 1080px;
-					"
-				>
+				<section class="order" id="order">
 					<div class="order__bg section-bg">
 						<img class="order__img" src="/test-loremipsum.net/images/order-bg.png" alt="" />
 					</div>
-					<div
-						class="container order__container"
-						style="position: relative; z-index: 10"
-					>
+					<div class="container order__container">
 						<div class="order__inner">
 							<h2 class="order__title">
 								Оформление
@@ -113,11 +109,16 @@
 							<div class="order__plan order-plan">
 								<div class="order-plan__list">
 									<div class="order-plan__item">
-										<img
-											class="order-plan__item-img"
-											src="/test-loremipsum.net/icons/search-offer.svg"
-											alt="search offer"
-										/>
+										<div class="order-plan__item-icon">
+											<img
+												class="order-plan__item-img"
+												src="/test-loremipsum.net/icons/search-offer.svg"
+												alt="search offer"
+											/>
+											<div
+												class="item-icon item-icon__search"
+											></div>
+										</div>
 										<p class="order-plan__item-descr">
 											Lorem ipsum dolor sit amet
 										</p>
@@ -130,11 +131,16 @@
 										<span class="order-plan__dots-item"></span>
 									</div>
 									<div class="order-plan__item">
-										<img
-											class="order-plan__item-img"
-											src="/test-loremipsum.net/icons/order-discount.svg"
-											alt="search offer"
-										/>
+										<div class="order-plan__item-icon">
+											<img
+												class="order-plan__item-img"
+												src="/test-loremipsum.net/icons/order-discount.svg"
+												alt="search offer"
+											/>
+											<div
+												class="item-icon item-icon__discount"
+											></div>
+										</div>
 										<p class="order-plan__item-descr">
 											Сonsecteturadipiscing elit
 										</p>
@@ -147,11 +153,16 @@
 										<span class="order-plan__dots-item"></span>
 									</div>
 									<div class="order-plan__item">
-										<img
-											class="order-plan__item-img"
-											src="/test-loremipsum.net/icons/send-order.svg"
-											alt="search offer"
-										/>
+										<div class="order-plan__item-icon">
+											<img
+												class="order-plan__item-img"
+												src="/test-loremipsum.net/icons/send-order.svg"
+												alt="search offer"
+											/>
+											<div
+												class="item-icon item-icon__order"
+											></div>
+										</div>
 										<p class="order-plan__item-descr">
 											Sed do eiusmod tempor
 										</p>
@@ -164,11 +175,16 @@
 										<span class="order-plan__dots-item"></span>
 									</div>
 									<div class="order-plan__item">
-										<img
-											class="order-plan__item-img"
-											src="/test-loremipsum.net/icons/confirm-order.svg"
-											alt="search offer"
-										/>
+										<div class="order-plan__item-icon">
+											<img
+												class="order-plan__item-img"
+												src="/test-loremipsum.net/icons/confirm-order.svg"
+												alt="search offer"
+											/>
+											<div
+												class="item-icon item-icon__confirm"
+											></div>
+										</div>
 										<p class="order-plan__item-descr">
 											Esse cillum dolore eu fugiat
 										</p>
@@ -181,11 +197,16 @@
 										<span class="order-plan__dots-item"></span>
 									</div>
 									<div class="order-plan__item">
-										<img
-											class="order-plan__item-img"
-											src="/test-loremipsum.net/icons/order-payment.svg"
-											alt="search offer"
-										/>
+										<div class="order-plan__item-icon">
+											<img
+												class="order-plan__item-img"
+												src="/test-loremipsum.net/icons/order-payment.svg"
+												alt="search offer"
+											/>
+											<div
+												class="item-icon item-icon__payment"
+											></div>
+										</div>
 										<p class="order-plan__item-descr">
 											Excepteur sint occaecat cupidatat non
 											proident
@@ -194,18 +215,120 @@
 								</div>
 							</div>
 							<div class="order__form">
-								<form class="order-form">
+								<form class="order-form" action="#" method="POST">
 									<div class="order-form__row">
 										<div class="order-form__item">
 											<div
 												class="order-form__select custom-select"
+												tabindex="0"
 											>
 												<div class="custom-select__header">
 													<div class="custom-select__current">
 														Выберите тип системы
 													</div>
 												</div>
+												<div class="custom-select__list">
+													<div class="custom-select__item">
+														Sed ut perspiciatis
+													</div>
+													<div class="custom-select__item">
+														Nemo enim ipsam
+													</div>
+													<div class="custom-select__item">
+														Et harum quidem
+													</div>
+													<div class="custom-select__item">
+														Temporibus autem
+													</div>
+													<div class="custom-select__item">
+														Itaque earum rerum
+													</div>
+													<div class="custom-select__item">
+														Sed ut perspiciatis
+													</div>
+													<div class="custom-select__item">
+														Nemo enim ipsam
+													</div>
+													<div class="custom-select__item">
+														Et harum quidem
+													</div>
+													<div class="custom-select__item">
+														Temporibus autem
+													</div>
+													<div class="custom-select__item">
+														Itaque earum rerum
+													</div>
+													<div class="custom-select__item">
+														Sed ut perspiciatis
+													</div>
+													<div class="custom-select__item">
+														Nemo enim ipsam
+													</div>
+													<div class="custom-select__item">
+														Et harum quidem
+													</div>
+													<div class="custom-select__item">
+														Temporibus autem
+													</div>
+													<div class="custom-select__item">
+														Itaque earum rerum
+													</div>
+												</div>
 											</div>
+											<select
+												class="order-form__select defaulth-select"
+												name="order-form__select"
+												id="order-form__select"
+												placeholder="Выберите тип системы"
+												tabindex="-1"
+											>
+												<option>Выберите тип системы</option>
+												<option value="Sed ut perspiciatis">
+													Sed ut perspiciatis
+												</option>
+												<option value="Nemo enim ipsam">
+													Nemo enim ipsam
+												</option>
+												<option value="Et harum quidem">
+													Et harum quidem
+												</option>
+												<option value="Temporibus autem">
+													Temporibus autem
+												</option>
+												<option value="Itaque earum rerum">
+													Itaque earum rerum
+												</option>
+												<option value="Sed ut perspiciatis">
+													Sed ut perspiciatis
+												</option>
+												<option value="Nemo enim ipsam">
+													Nemo enim ipsam
+												</option>
+												<option value="Et harum quidem">
+													Et harum quidem
+												</option>
+												<option value="Temporibus autem">
+													Temporibus autem
+												</option>
+												<option value="Itaque earum rerum">
+													Itaque earum rerum
+												</option>
+												<option value="Sed ut perspiciatis">
+													Sed ut perspiciatis
+												</option>
+												<option value="Nemo enim ipsam">
+													Nemo enim ipsam
+												</option>
+												<option value="Et harum quidem">
+													Et harum quidem
+												</option>
+												<option value="Temporibus autem">
+													Temporibus autem
+												</option>
+												<option value="Itaque earum rerum">
+													Itaque earum rerum
+												</option>
+											</select>
 										</div>
 										<div class="order-form__item">
 											<input
@@ -215,6 +338,7 @@
 												type="email"
 												placeholder="Ваш e-mail"
 												required
+												tabindex="1"
 											/>
 										</div>
 										<div class="order-form__item">
@@ -225,17 +349,148 @@
 												type="text"
 												placeholder="Ваше имя"
 												required
+												tabindex="2"
 											/>
 										</div>
 									</div>
-									<div class="order-form__row"></div>
-									<div class="order-form__row"></div>
+									<div class="order-form__row">
+										<div class="order-form__item">
+											<label
+												class="order-form__range-label"
+												for="order-form__range"
+											>
+												Sed ut perspiciatis, unde omnis iste
+												natus
+												<span class="order-form__range-percent">
+													75 %
+												</span>
+											</label>
+											<input
+												class="order-form__range"
+												id="order-form__range"
+												name="order-form__range"
+												type="range"
+												min="0"
+												max="100"
+												value="75"
+												tabindex="3"
+											/>
+										</div>
+										<div class="order-form__item">
+											<input
+												class="order-form__file"
+												id="order-form__file"
+												name="order-form__file"
+												type="file"
+												tabindex="4"
+											/>
+											<label
+												class="order-form__file-label"
+												for="order-form__file"
+											>
+												<span class="order-form__file-icon">
+													<img
+														class="order-form__file-img"
+														src="/test-loremipsum.net/icons/file-upload.svg"
+														alt="file icon"
+													/>
+												</span>
+												Прикрепить файл
+											</label>
+										</div>
+									</div>
+									<div class="order-form__row">
+										<button
+											class="order-form__send-btn"
+											type="submit"
+											tabindex="4"
+										>
+											Отправить
+										</button>
+									</div>
 								</form>
 							</div>
 						</div>
 					</div>
 				</section>
 			</main>
+
+			<footer class="footer">
+				<div class="container">
+					<div class="footer__inner">
+						<p class="footer__copyright">
+							©
+							<span>2018 «LoremIpsum.net»</span>
+							Все права защищены.
+						</p>
+						<div class="footer__item footer__item-devider"></div>
+						<a
+							class="footer__item footer__item-payment"
+							href="https://oplata.qiwi.com/form/loremipsum-test"
+							target="_blank"
+						>
+							<img
+								class="footer__item-img"
+								src="/test-loremipsum.net/icons/qiwi-wallet.svg"
+								alt="qiwi wallet"
+							/>
+							<p class="footer__item-name">QIWI wallet</p>
+						</a>
+						<a
+							class="footer__item footer__item-payment"
+							href="https://money.yandex.ru/to/1234567890"
+							target="_blank"
+						>
+							<img
+								class="footer__item-img"
+								src="/test-loremipsum.net/icons/yandex-money.svg"
+								alt="yandex money"
+							/>
+							<p class="footer__item-name">Yandex Money</p>
+						</a>
+						<a
+							class="footer__item footer__item-payment"
+							href="https://merchant.webmoney.ru/lmi/payment.asp?LMI_PAYEE_PURSE=R123456789012&LMI_PAYMENT_AMOUNT=100&LMI_PAYMENT_DESC=Оплата"
+							target="_blank"
+						>
+							<img
+								class="footer__item-img"
+								src="/test-loremipsum.net/icons/web-money.svg"
+								alt="web money"
+							/>
+							<p class="footer__item-name">Web Money</p>
+						</a>
+						<div class="footer__item footer__item-devider"></div>
+						<a
+							class="footer__item footer__item-contact"
+							href="mailto:info@ipsum228.com"
+							target="_blank"
+						>
+							<img
+								class="footer__item-img"
+								src="/test-loremipsum.net/icons/mail-icon.svg"
+								alt="mail"
+							/>
+							<p class="footer__item-name">info@ipsum228.com</p>
+						</a>
+						<a
+							class="footer__item footer__item-contact"
+							href="https://vk.com/loremipsum-test"
+							target="_blank"
+						>
+							<img
+								class="footer__item-img"
+								src="/test-loremipsum.net/icons/vk-icon.svg"
+								alt="vk"
+							/>
+							<p class="footer__item-name">Мы вконтакте</p>
+						</a>
+					</div>
+				</div>
+			</footer>
+
+			<div class="overlay"></div>
 		</div>
+
 	</body>
 </html>
