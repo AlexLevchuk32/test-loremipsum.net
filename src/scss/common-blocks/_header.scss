@@ -26,6 +26,7 @@
 		font-weight: 800;
 		font-size: rem(28);
 		text-transform: uppercase;
+		cursor: pointer;
 	}
 	// .header__logo-link
 	&__logo-link {
@@ -69,21 +70,108 @@
 		}
 	}
 	// .header__burger
-	&__burger {
+	&__burger-btn {
 		display: none;
-		// display: flex;
-		// flex-direction: column;
-		// row-gap: 5px;
-		padding: 10px;
-		margin-right: -10px;
-		cursor: pointer;
 	}
 	// .header__burger-line
 	&__burger-line {
-		display: block;
-		width: 30px;
-		height: 3px;
-		// margin-left: auto;
-		background-color: $color-main-white;
+	}
+}
+
+//==========================================================================================================================================================
+// Адаптив
+@media only screen and (max-width: 1199.98px) {
+	.header {
+		height: 90px;
+		&__logo {
+			font-size: rem(28);
+		}
+	}
+}
+
+@media only screen and (max-width: 991.98px) {
+	.header {
+		height: 80px;
+		&__logo {
+			font-size: rem(26);
+		}
+		&__menu {
+			column-gap: 30px;
+		}
+	}
+}
+
+@media only screen and (max-width: 767.98px) {
+	.header {
+		height: 70px;
+		&__logo {
+			font-size: rem(24);
+		}
+		&__menu {
+			position: absolute;
+			top: 70px;
+			right: 0;
+			flex-direction: column;
+			row-gap: 15px;
+			width: 100%;
+			max-width: 260px;
+			height: 100vh;
+			padding: 15px;
+			background-color: $color-main-bg-dark;
+			transform: translateX(100%);
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.3s ease-in-out;
+			.header__menu-item {
+				padding: 10px;
+				font-size: rem(18);
+				&::before {
+					width: 100%;
+					left: unset;
+				}
+			}
+			&.open {
+				opacity: 1;
+				visibility: visible;
+				transform: translateX(0);
+			}
+		}
+		&__menu-item {
+			font-size: rem(14);
+		}
+		&__burger-btn {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			row-gap: 6px;
+			width: 35px;
+			// height: 25px;
+			cursor: pointer;
+			span {
+				width: 35px;
+				height: 3px;
+				border-radius: 3px;
+				background-color: #fff;
+				transition: transform 0.3s ease;
+			}
+			&.active {
+				span {
+					position: absolute;
+					&:nth-child(2) {
+						scale: 0;
+					}
+					&:nth-child(1) {
+						top: calc(50% - rem(1));
+						transform: rotate(-45deg);
+					}
+					&:nth-child(3) {
+						top: calc(50% - rem(1));
+						transform: rotate(45deg);
+					}
+				}
+			}
+		}
 	}
 }

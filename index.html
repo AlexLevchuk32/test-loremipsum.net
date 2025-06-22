@@ -25,7 +25,7 @@
 								Оформить заказ
 							</a>
 						</nav>
-						<button class="header__burger">
+						<button class="header__burger-btn">
 							<span class="header__burger-line"></span>
 							<span class="header__burger-line"></span>
 							<span class="header__burger-line"></span>
@@ -40,6 +40,12 @@
 						<img
 							class="main-banner__img"
 							src="/images/main-bg.webp"
+							loading="lazy"
+							alt="main background"
+						/>
+						<img
+							class="main-banner__img-small"
+							src="/images/main-bg-2.webp"
 							loading="lazy"
 							alt="main background"
 						/>
@@ -207,7 +213,7 @@
 								</div>
 							</div>
 							<div class="order__form">
-								<form class="order-form">
+								<form class="order-form" action="#" method="POST">
 									<div class="order-form__row">
 										<div class="order-form__item">
 											<div
@@ -408,7 +414,7 @@
 			</main>
 
 			<footer class="footer">
-				<div class="container footer-container">
+				<div class="container">
 					<div class="footer__inner">
 						<p class="footer__copyright">
 							©
@@ -472,7 +478,7 @@
 						>
 							<img
 								class="footer__item-img"
-								src="/public/icons/vk-icon.svg"
+								src="/icons/vk-icon.svg"
 								alt="vk"
 							/>
 							<p class="footer__item-name">Мы вконтакте</p>
@@ -480,7 +486,10 @@
 					</div>
 				</div>
 			</footer>
+
+			<div class="overlay"></div>
 		</div>
+
 		<script type="module" src="/src/js/main.js"></script>
 	</body>
 </html>

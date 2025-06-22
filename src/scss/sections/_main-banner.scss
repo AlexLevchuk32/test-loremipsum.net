@@ -15,6 +15,9 @@
 		height: 100%;
 		object-fit: cover;
 	}
+	&__img-small {
+		display: none;
+	}
 	// .main-banner__container
 	&__container {
 		position: relative;
@@ -87,6 +90,91 @@
 		&:active {
 			transform: translateY(2px);
 			box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+		}
+	}
+}
+
+.main-banner--animated {
+	.main-banner__title,
+	.main-banner__content,
+	.main-banner__buttons {
+		animation-name: fade-in;
+		animation-duration: 0.5s;
+		animation-timing-function: ease-in-out;
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+		transform: translateX(25%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+//==========================================================================================================================================================
+// Адаптив
+@media only screen and (max-width: 1199.98px) {
+	.main-banner {
+		&__title {
+			font-size: rem(42);
+			margin-bottom: 60px;
+			br {
+				display: none;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 991.98px) {
+	.main-banner {
+		&__title {
+			font-size: rem(38);
+		}
+	}
+}
+
+@media only screen and (max-width: 767.98px) {
+	.main-banner {
+		padding: 140px 0;
+		min-height: unset;
+
+		&__title {
+			font-size: rem(38);
+			margin-bottom: 30px;
+		}
+		&__content {
+			margin-bottom: 30px;
+		}
+		&__list-ttitle {
+			font-size: rem(18);
+		}
+		&__list-item {
+			font-size: rem(18);
+		}
+	}
+}
+
+@media (max-width: 575.98px) {
+	.main-banner {
+		&__img {
+			display: none;
+		}
+		&__img-small {
+			display: block;
+		}
+		&__title {
+			font-size: rem(32);
+		}
+		&__buttons {
+			flex-direction: column;
+			row-gap: 15px;
+		}
+		&__btn {
+			max-width: 100%;
 		}
 	}
 }
