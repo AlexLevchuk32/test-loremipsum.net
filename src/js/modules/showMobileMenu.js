@@ -12,10 +12,7 @@ function showHideMobileMenu() {
 		const overlay = document.querySelector('.overlay');
 
 		burgerIcon.addEventListener('click', () => {
-			if (
-				!burgerIcon.classList.contains('active') &&
-				!mobileMenu.classList.contains('active')
-			) {
+			if (!burgerIcon.classList.contains('active') && !mobileMenu.classList.contains('active')) {
 				addAciveClass();
 			} else {
 				removeActiveClass();
