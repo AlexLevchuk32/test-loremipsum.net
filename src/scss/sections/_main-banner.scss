@@ -164,10 +164,11 @@
 @media (max-width: 575.98px) {
 	.main-banner {
 		&__img {
-			display: none;
+			// display: none;
+			object-position: 60% center;
 		}
 		&__img-small {
-			display: block;
+			// display: block;
 		}
 		&__title {
 			font-size: rem(32);
